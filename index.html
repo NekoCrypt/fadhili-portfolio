@@ -85,27 +85,41 @@
       font-size: 1.1rem;
       color: #aaa;
     }
+
+    /*  fixed animated text */
     #animated-text {
       font-weight: bold;
       color: #39f8a0;
-      white-space: nowrap;
       overflow: hidden;
       border-right: 2px solid #39f8a0;
       width: 0;
       animation: typing 4s steps(40, end) forwards;
       margin: 0.5rem 0 1rem;
+      word-wrap: break-word;
+      display: inline-block;
+      max-width: 100%;
+      text-align: center;
     }
+
     @keyframes typing {
       to {
         width: 100%;
       }
     }
+
     .intro-content {
       max-width: 600px;
       font-size: 1rem;
       line-height: 1.6;
       margin-bottom: 1.5rem;
     }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
     .btn-group a {
       margin: 0.5rem;
       padding: 0.6rem 1.2rem;
@@ -116,21 +130,26 @@
       font-weight: bold;
       transition: background-color 0.3s;
     }
+
     .btn-group a:hover {
       background-color: #2de89d;
     }
+
     .btn-group a.alt {
       background-color: transparent;
       color: #39f8a0;
       border: 2px solid #39f8a0;
     }
+
     .btn-group a.alt:hover {
       background-color: #1a1a1a;
     }
+
     .emoji-row {
       font-size: 1.4rem;
       margin: 1rem 0 0.5rem;
     }
+
     .binary-bg {
       position: absolute;
       top: 0;
@@ -141,15 +160,38 @@
       z-index: 0;
       pointer-events: none;
     }
+
     .binary-line {
       color: rgba(57, 248, 160, 0.06);
       font-size: 12px;
       white-space: nowrap;
       animation: scrollBinary 10s linear infinite;
     }
+
     @keyframes scrollBinary {
       0% { transform: translateY(100%); }
       100% { transform: translateY(-100%); }
+    }
+
+    /*  Mobile fix for animated text */
+    @media (max-width: 768px) {
+      #animated-text {
+        font-size: 0.95rem;
+        white-space: normal;
+        width: auto;
+        animation: none;
+        border-right: none;
+      }
+
+      .intro-content {
+        font-size: 0.95rem;
+        padding: 0 1rem;
+      }
+
+      .btn-group a {
+        font-size: 0.95rem;
+        padding: 0.5rem 1rem;
+      }
     }
   </style>
 </head>
@@ -170,7 +212,7 @@
       <h1>👨‍💻 Fadhili</h1>
       <p class="tagline">Cybersecurity Enthusiast & Ethical Hacker</p>
     </div>
-    <div id="animated-text">Cybersecurity | Ethical Hacking | Digital Defense</div>
+    <div id="animated-text">Cybersecurity | Ethical Hacker | Digital Defense</div>
     <p class="intro-content">
       🛡️ I'm a passionate cybersecurity practitioner focused on defending digital spaces, uncovering vulnerabilities, and building secure solutions. <br>
       💻 I thrive in CTFs, bug bounties, and real-world challenges.<br>
