@@ -18,6 +18,7 @@
       position: relative;
       overflow-x: hidden;
     }
+
     nav {
       background-color: #111;
       padding: 1rem 2rem;
@@ -26,11 +27,13 @@
       align-items: center;
       flex-wrap: wrap;
     }
+
     nav .logo {
       font-size: 1.4rem;
       font-weight: bold;
       color: #39f8a0;
     }
+
     nav ul {
       list-style: none;
       display: flex;
@@ -38,17 +41,20 @@
       margin: 0;
       padding: 0;
     }
+
     nav ul li a {
       color: #c3f3e7;
       text-decoration: none;
       font-weight: 600;
       padding: 0.3rem 0.8rem;
     }
+
     nav ul li a.active {
       background-color: #39f8a0;
       color: #0f0f0f;
       border-radius: 4px;
     }
+
     main {
       flex: 1;
       display: flex;
@@ -60,6 +66,7 @@
       position: relative;
       z-index: 2;
     }
+
     footer {
       text-align: center;
       padding: 1rem;
@@ -67,6 +74,7 @@
       color: #777;
       z-index: 2;
     }
+
     .profile-pic {
       width: 140px;
       height: 140px;
@@ -75,18 +83,20 @@
       margin-bottom: 1rem;
       box-shadow: 0 0 12px rgba(57, 248, 160, 0.4);
     }
+
     .name-tagline {
       margin-bottom: 1.2rem;
     }
+
     .name-tagline h1 {
       font-size: 2rem;
     }
+
     .tagline {
       font-size: 1.1rem;
       color: #aaa;
     }
 
-    /*  fixed animated text */
     #animated-text {
       font-weight: bold;
       color: #39f8a0;
@@ -95,10 +105,10 @@
       width: 0;
       animation: typing 4s steps(40, end) forwards;
       margin: 0.5rem 0 1rem;
-      word-wrap: break-word;
       display: inline-block;
-      max-width: 100%;
       text-align: center;
+      max-width: 100%;
+      white-space: nowrap;
     }
 
     @keyframes typing {
@@ -173,30 +183,27 @@
       100% { transform: translateY(-100%); }
     }
 
-    /*  Mobile fix for animated text */
     @media (max-width: 768px) {
       #animated-text {
-        font-size: 0.95rem;
+        font-size: 1rem;
         white-space: normal;
-        width: auto;
         animation: none;
         border-right: none;
-      }
-
-      .intro-content {
-        font-size: 0.95rem;
+        width: auto;
         padding: 0 1rem;
       }
 
       .btn-group a {
-        font-size: 0.95rem;
-        padding: 0.5rem 1rem;
+        width: calc(100% - 2rem);
+        max-width: 300px;
+        box-sizing: border-box;
       }
     }
   </style>
 </head>
 <body>
   <div class="binary-bg" id="binary-bg"></div>
+
   <nav>
     <div class="logo">Fadhili</div>
     <ul>
@@ -212,16 +219,22 @@
       <h1>👨‍💻 Fadhili</h1>
       <p class="tagline">Cybersecurity Enthusiast & Ethical Hacker</p>
     </div>
-    <div id="animated-text">Cybersecurity | Ethical Hacker | Digital Defense</div>
+
+    <div id="animated-text">
+      Cybersecurity | Ethical Hacker | Digital Defense
+    </div>
+
     <p class="intro-content">
       🛡️ I'm a passionate cybersecurity practitioner focused on defending digital spaces, uncovering vulnerabilities, and building secure solutions. <br>
       💻 I thrive in CTFs, bug bounties, and real-world challenges.<br>
       🔍 My specialties include vulnerability analysis, Penetration Testing, and secure development.
     </p>
+
     <div class="btn-group">
       <a href="portfolio.html">View My Work</a>
       <a href="contact.html" class="alt">Get In Touch</a>
     </div>
+
     <div class="emoji-row">🧠 🔐 🕵️‍♂️ 🔧</div>
   </main>
 
