@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fadhili | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      color: #c3f3e7;
+    }
+    nav {
+      background-color: #111;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    nav .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #39f8a0;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      color: #c3f3e7;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.3rem 0.8rem;
+    }
+    nav ul li a.active {
+      background-color: #39f8a0;
+      color: #0f0f0f;
+      border-radius: 4px;
+    }
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #39f8a0;
+    }
+    .tab-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    .tab-buttons button {
+      background: #161616;
+      color: #39f8a0;
+      border: 1px solid #39f8a0;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    }
+    .tab-buttons button:hover {
+      background-color: #39f8a0;
+      color: #0f0f0f;
+      transform: scale(1.05);
+    }
+    .tab-buttons button.active {
+      background: #39f8a0;
+      color: #0f0f0f;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .item {
+      background: #1d1d1d;
+      padding: 1rem;
+      border-left: 4px solid #39f8a0;
+      margin-bottom: 1.5rem;
+      border-radius: 6px;
+      transition: transform 0.2s, box-shadow 0.3s, background-color 0.3s;
+      cursor: pointer;
+    }
+    .item:hover {
+      transform: scale(1.02);
+      background-color: #232323;
+      box-shadow: 0 0 12px rgba(57, 248, 160, 0.3);
+    }
+    .item h3 {
+      margin-top: 0;
+      color: #fff;
+    }
+    .item p {
+      margin-bottom: 0.5rem;
+    }
+    .item small {
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Fadhili</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>📁 Portfolio</h1>
+    <p style="text-align:center; max-width:700px; margin: 0 auto 2rem;">
+      Below you'll find my selected work and learning journeys in cybersecurity 🔐. Click the sections to explore! 🕵️‍♂️
+    </p>
+
+    <div class="tab-buttons">
+      <button class="tab-btn active" data-tab="resume">📄 Resume</button>
+      <button class="tab-btn" data-tab="projects">🛠️ Projects</button>
+      <button class="tab-btn" data-tab="labs">🧪 Lab Challenges</button>
+    </div>
+
+    <div id="resume" class="tab-content active">
+      <div class="item">
+        <h3>🎓 Academic Background</h3>
+        <p>BSc. Development Studies and Information Technology - Murang'a University</p>
+        <small>Expected Graduation: 2028</small>
+      </div>
+      <div class="item">
+        <h3>💼 Work Experience</h3>
+        <p>Cyber Shujaa Trainee | Penetration Testing & Forensics | Cloud and Network Security| 2025</p>
+        <small>Rating: Great</small>
+      </div>
+      <div class="item">
+        <h3>📜 Certifications</h3>
+        <p>TryHackMe Pre-Security, Network Fundamentals, CCNA V1, Microsoft AI Fundamentals</p>
+        <p>Certificate In Ethical Hacking (CEH) - Cybershujaa, USIU</p>
+        <p>Cisco Certificate in Ethical Hacking</p>
+        <small>Progress: Done</small>
+      </div>
+      <div class="item">
+        <h3>🧠 Skills</h3>
+        <p>Linux, Networking, Burp Suite, SQLi, XSS, Metasploit, OSINT, Reverse Engineering</p>
+      </div>
+    </div>
+
+    <div id="projects" class="tab-content">
+      <div class="item">
+        <h3>🔍 Vulnerability Report: DVWA</h3>
+        <p>Explored XSS, SQLi, and CSRF on Damn Vulnerable Web App using Burp Suite.</p>
+        <small>Tools: Burp Suite, Firefox DevTools</small>
+      </div>
+      <div class="item">
+        <h3>🔐 WordPress Bruteforce</h3>
+        <p>Automated brute-force login attacks on misconfigured WP logins.</p>
+        <small>Rating: High | Tool: Hydra</small>
+      </div>
+      <div class="item">
+        <h3>🛡️ Port Scan & Exploitation</h3>
+        <p>Scanned a lab VM using Nmap and exploited vulnerable RSH service using Metasploit.</p>
+        <small>Rating: Medium</small>
+      </div>
+    </div>
+
+    <div id="labs" class="tab-content">
+      <div class="item">
+        <h3>💣 Buffer Overflow 101</h3>
+        <p>Learned how to identify BOFs and craft payloads to exploit memory structures.</p>
+        <small>Tools: Immunity Debugger, Python</small>
+      </div>
+      <div class="item">
+        <h3>🕵️‍♂️ OSINT Investigation</h3>
+        <p>Used tools like Sherlock, Recon-ng, and theHarvester to discover public footprint.</p>
+        <small>Learned: TryHackMe</small>
+      </div>
+      <div class="item">
+        <h3>🌐 Subdomain Enumeration</h3>
+        <p>Used FFUF & Gobuster for URL fuzzing and uncovering hidden directories.</p>
+        <small>Learned: Importance of recon in red teaming TryHackMe</small>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p style="text-align:center;">&copy; 2025 Fadhili | Cybersecurity & Hacking Portfolio</p>
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll(".tab-btn");
+    const tabs = document.querySelectorAll(".tab-content");
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        buttons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        tabs.forEach(tab => tab.classList.remove("active"));
+        document.getElementById(btn.dataset.tab).classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>
