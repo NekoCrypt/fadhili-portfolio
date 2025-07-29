@@ -61,6 +61,7 @@ h1 {
   margin: 0.5rem 0;
 }
 
+/* ✅ Fixed Typing Animation */
 #animated-text {
   font-size: 1.25rem;
   color: #80ffea;
@@ -68,20 +69,17 @@ h1 {
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid #80ffea;
-  width: 0;
-  animation: typing 4s steps(40, end) forwards, blink 0.7s infinite;
+  width: 0ch;
+  animation: typing 4s steps(46, end) forwards, blink 0.7s steps(1, end) 4;
 }
 
 @keyframes typing {
-  to {
-    width: 100%;
-  }
+  from { width: 0ch; }
+  to { width: 46ch; } /* Adjust this number to match character count */
 }
 
 @keyframes blink {
-  50% {
-    border-color: transparent;
-  }
+  50% { border-color: transparent; }
 }
 
 .bio {

@@ -98,24 +98,20 @@
     }
 
     #animated-text {
-      font-weight: bold;
-      color: #39f8a0;
-      overflow: hidden;
-      border-right: 2px solid #39f8a0;
-      width: 0;
-      animation: typing 4s steps(40, end) forwards;
-      margin: 0.5rem 0 1rem;
-      display: inline-block;
-      text-align: center;
-      max-width: 100%;
-      white-space: nowrap;
-    }
-
-    @keyframes typing {
-      to {
-        width: 100%;
-      }
-    }
+  font-weight: bold;
+  color: #39f8a0;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #39f8a0;
+  width: 0ch;
+  animation: typing 4s steps(52, end) forwards, blink 0.7s steps(1, end) 4;
+  margin-top: 1rem;
+}
+@keyframes typing {
+  from { width: 0ch; }
+  to { width: 52ch; }
+}
 
     .intro-content {
       max-width: 600px;
@@ -225,9 +221,9 @@
     </div>
 
     <p class="intro-content">
-      🛡️ I'm a passionate cybersecurity practitioner focused on defending digital spaces, uncovering vulnerabilities, and building secure solutions. <br>
-      💻 I thrive in CTFs, bug bounties, and real-world challenges.<br>
-      🔍 My specialties include vulnerability analysis, Penetration Testing, and secure development.
+      I'm a passionate cybersecurity practitioner focused on defending digital spaces, uncovering vulnerabilities, and building secure solutions. <br>
+       I thrive in CTFs, bug bounties, and real-world challenges.<br>
+      My core competencies include vulnerability assessment, Penetration Testing, and secure software development practices. <br>
     </p>
 
     <div class="btn-group">
@@ -235,11 +231,11 @@
       <a href="contact.html" class="alt">Get In Touch</a>
     </div>
 
-    <div class="emoji-row">🧠 🔐 🕵️‍♂️ 🔧</div>
+    <div class="emoji-row">Developed By Fadhili </div>
   </main>
 
   <footer>
-    &copy; 2025 Fadhili | Built for Cybersecurity & Ethical Hacking Showcase
+    &copy; © 2025 Fadhili | A Gamified Cybersecurity Portfolio Experience
   </footer>
 </body>
 </html>
