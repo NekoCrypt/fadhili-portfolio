@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fadhili | Contact</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      color: #c3f3e7;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    nav {
+      background-color: #111;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #39f8a0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: #c3f3e7;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.3rem 0.8rem;
+    }
+
+    nav ul li a.active {
+      background-color: #39f8a0;
+      color: #0f0f0f;
+      border-radius: 4px;
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .vector-bg {
+      background: url('https://www.svgrepo.com/show/331228/cybersecurity.svg') no-repeat center center;
+      background-size: 120px;
+      position: absolute;
+      top: 120px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 160px;
+      opacity: 0.08;
+      z-index: -1;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1.5rem;
+      max-width: 700px;
+      margin: 2rem auto 0;
+      width: 100%;
+    }
+
+    .contact-card {
+      background: #161616;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 0 6px rgba(57, 248, 160, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.2s, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .contact-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 12px rgba(57, 248, 160, 0.4);
+    }
+
+    .contact-card img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-card a {
+      color: #39f8a0;
+      font-weight: bold;
+      text-decoration: none;
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 0.25rem 0;
+      transition: color 0.3s, text-shadow 0.3s;
+    }
+
+    .contact-card a:hover {
+      color: #80ffea;
+      text-shadow: 0 0 8px #80ffea;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #0d0d0d;
+      color: #777;
+    }
+
+    
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      main {
+        padding: 1rem;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1.5rem;
+        justify-items: center;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .contact-card {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Fadhili</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="vector-bg"></div>
+    <h1>📞 Contact Me</h1>
+    <p style="text-align:center; max-width:600px; margin-bottom:2rem">
+      I’m open to cybersecurity opportunities, collaborations, and networking. Let’s connect! 
+    </p>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon" /> 
+        <a href="mailto:alsofadhili@gmail.com">Email</a>
+      </div>
+      <div class="contact-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Icon" /> 
+        <a href="https://linkedin.com/in/fadhili-martsal-tech" target="_blank">LinkedIn</a>
+      </div>
+      <div class="contact-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram Icon" /> 
+<a href="https://instagram.com/neko_crypt" target="_blank">Instagram</a>
+      </div>
+      <div class="contact-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Icon" /> 
+        <a href="https://wa.me/254742085084" target="_blank">WhatsApp</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Fadhili | Reach Out
+  </footer>
+</body>
+</html>

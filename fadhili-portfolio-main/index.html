@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fadhili | Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      color: #c3f3e7;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    nav {
+      background-color: #111;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #39f8a0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: #c3f3e7;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.3rem 0.8rem;
+    }
+
+    nav ul li a.active {
+      background-color: #39f8a0;
+      color: #0f0f0f;
+      border-radius: 4px;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #0d0d0d;
+      color: #777;
+      z-index: 2;
+    }
+
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      box-shadow: 0 0 12px rgba(57, 248, 160, 0.4);
+    }
+
+    .name-tagline {
+      margin-bottom: 1.2rem;
+    }
+
+    .name-tagline h1 {
+      font-size: 2rem;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      color: #aaa;
+    }
+
+    #animated-text {
+  font-weight: bold;
+  color: #39f8a0;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #39f8a0;
+  width: 0ch;
+  animation: typing 4s steps(52, end) forwards, blink 0.7s steps(1, end) 4;
+  margin-top: 1rem;
+}
+@keyframes typing {
+  from { width: 0ch; }
+  to { width: 52ch; }
+}
+
+    .intro-content {
+      max-width: 600px;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn-group a {
+      margin: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      text-decoration: none;
+      color: #0f0f0f;
+      background-color: #39f8a0;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .btn-group a:hover {
+      background-color: #2de89d;
+    }
+
+    .btn-group a.alt {
+      background-color: transparent;
+      color: #39f8a0;
+      border: 2px solid #39f8a0;
+    }
+
+    .btn-group a.alt:hover {
+      background-color: #1a1a1a;
+    }
+
+    .emoji-row {
+      font-size: 1.4rem;
+      margin: 1rem 0 0.5rem;
+    }
+
+    .binary-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .binary-line {
+      color: rgba(57, 248, 160, 0.06);
+      font-size: 12px;
+      white-space: nowrap;
+      animation: scrollBinary 10s linear infinite;
+    }
+
+    @keyframes scrollBinary {
+      0% { transform: translateY(100%); }
+      100% { transform: translateY(-100%); }
+    }
+
+    @media (max-width: 768px) {
+      #animated-text {
+        font-size: 1rem;
+        white-space: normal;
+        animation: none;
+        border-right: none;
+        width: auto;
+        padding: 0 1rem;
+      }
+
+      .btn-group a {
+        width: calc(100% - 2rem);
+        max-width: 300px;
+        box-sizing: border-box;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="binary-bg" id="binary-bg"></div>
+
+  <nav>
+    <div class="logo">Fadhili</div>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <img src="profile.jpg" alt="Profile" class="profile-pic" />
+    <div class="name-tagline">
+      <h1>👨‍💻 Fadhili</h1>
+      <p class="tagline">Cybersecurity Enthusiast & Ethical Hacker</p>
+    </div>
+
+    <div id="animated-text">
+      Cybersecurity | Ethical Hacker | Digital Defense
+    </div>
+
+    <p class="intro-content">
+      I'm a passionate cybersecurity practitioner focused on defending digital spaces, uncovering vulnerabilities, and building secure solutions. <br>
+       I thrive in CTFs, bug bounties, and real-world challenges.<br>
+      My core competencies include vulnerability assessment, Penetration Testing, and secure software development practices. <br>
+    </p>
+
+    <div class="btn-group">
+      <a href="portfolio.html">View My Work</a>
+      <a href="contact.html" class="alt">Get In Touch</a>
+    </div>
+
+    <div class="emoji-row">Developed By Fadhili </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Fadhili | A Gamified Cybersecurity Portfolio Experience
+  </footer>
+</body>
+</html>
