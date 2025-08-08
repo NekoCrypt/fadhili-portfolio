@@ -130,7 +130,7 @@
   <main>
     <h1>📁 Portfolio</h1>
     <p style="text-align:center; max-width:700px; margin: 0 auto 2rem;">
-      Below you'll find my selected work and learning journeys in cybersecurity . Click the sections to explore! 
+      Below you'll find my selected work and learning journeys in cybersecurity. Click the sections to explore!
     </p>
 
     <div class="tab-buttons">
@@ -139,62 +139,92 @@
       <button class="tab-btn" data-tab="labs">💻 Lab Challenges</button>
     </div>
 
+    
     <div id="resume" class="tab-content active">
       <div class="item">
-        <h3> Academic Background</h3>
+        <h3>Academic Background</h3>
         <p>BSc. Development Studies and Information Technology - Murang'a University</p>
         <small>Expected Graduation: 2028</small>
       </div>
       <div class="item">
-        <h3> Work Experience</h3>
-        <p>Cyber Shujaa Trainee | Penetration Testing & Forensics | Cloud and Network Security|</p>
-        <small>Rating: Great</small>
+        <h3>Work Experience</h3>
+        <p>Cyber Shujaa Trainee | Penetration Testing & Forensics | CyberSecurity |</p>
+        <small>Recent experiences</small>
       </div>
       <div class="item">
-        <h3> Certifications</h3>
-        <p>TryHackMe Pre-Security</p><p>Network Fundamentals</p> <p>CCNA V1</p> <p>Microsoft AI Fundamentals</p>
+        <h3>Soft Skills</h3>
+        <p>Analytical Thinking, Technical Documentation, Adaptability, Team Collaboration</p>
+      </div>
+      <div class="item">
+        <h3>Certifications</h3>
+        <p>TryHackMe Pre-Security</p>
+        <p>Cisco Ethical Hacker</p>
+        <p>Cisco Cyber Threat Management</p>
+        <p>Network Fundamentals</p>
+        <p>CCNA V1</p>
+        <p>Microsoft AI Fundamentals</p>
         <p>Certificate In Ethical Hacking (CEH) - Cybershujaa, USIU</p>
         <small>Progress: Done</small>
       </div>
-      <div class="item">
-        <h3> Skills</h3>
-        <p>Linux, Networking, Burp Suite, SQLi, XSS, Metasploit, OSINT, Reverse Engineering</p>
-      </div>
     </div>
 
+    
     <div id="projects" class="tab-content">
       <div class="item">
-        <h3> Vulnerability Report: DVWA</h3>
-        <p>Explored XSS, SQLi, and CSRF on Damn Vulnerable Web Application.</p>
-        <small>Tools: Burp Suite, Firefox DevTools</small>
+        <h3>Open Source Intelligence</h3>
+        <p>Conducted reconnaissance to identify digital footprints.</p>
+        <small>Tools: Sherlock, Recon-ng, theHarvester</small>
       </div>
       <div class="item">
-        <h3> WordPress Bruteforce</h3>
-        <p>Automated brute-force login attacks on misconfigured WP logins.</p>
-        <small>Rating: High | Tool: Hydra</small>
+        <h3>Packet Sniffing & ICMP Analysis</h3>
+        <p>Captured and analyzed ICMP traffic to identify suspicious network activity.</p>
+        <small>Tools: Scapy, Wireshark</small>
       </div>
       <div class="item">
-        <h3> Port Scan & Exploitation</h3>
-        <p>Scanned a lab VM using Nmap and exploited vulnerable RSH service using Metasploit.</p>
-        <small>Rating: Medium</small>
+        <h3>Docker Security Scan</h3>
+        <p>Scanned vulnerable Docker containers for CVEs and misconfigurations.</p>
+        <small>Tools: Grype, Dagda</small>
+      </div>
+      <div class="item">
+        <h3>Path Traversal Testing</h3>
+        <p>Identified file inclusion and path traversal vulnerabilities in a test web app.</p>
+        <small>Tools: Burp Suite, FFUF, Gobuster</small>
+      </div>
+      <div class="item">
+        <h3>Port Scan & Exploitation</h3>
+        <p>Scanned virtual lab machines using Nmap and exploited vulnerable services using Metasploit.</p>
+        <small>Tools: Nmap, Metasploit</small>
+      </div>
+      <div class="item">
+        <h3>Penetration Testing</h3>
+        <p>Explored XSS, SQLi, and CSRF vulnerabilities on Vulnerable Web Application</p>
+        <p>Automated brute-force login attacks on misconfigured web applications</p>
+        <p>Enumerated hidden subdomains and scanned for exposed services.</p>
+        <small>Tools: Burp Suite, OWASP ZAP, SQLMap, Hydra, FFUF, Gobuster, Nmap</small>
       </div>
     </div>
 
+   
     <div id="labs" class="tab-content">
       <div class="item">
-        <h3> Buffer Overflow 101</h3>
-        <p>Learned how to identify BOFs and craft payloads to exploit memory structures.</p>
+        <h3>Hackthebox Crocodile Challenge</h3>
+        <p>Enumerated an FTP server using Nmap and gained anonymous access to retrieve credentials. Pivoted via port 80, used Gobuster to discover hidden directories, and located a login page. Used admin credentials from FTP to log in and capture the final flag.</p>
+        <small>Tools: Nmap, FTP, Gobuster</small>
+      </div>
+      <div class="item">
+        <h3>Cisco Networking Labs</h3>
+        <p>Configured routers, switches, and VLANs in simulated Cisco Packet Tracer environments. Practiced subnetting, static/dynamic routing, and securing network devices.</p>
+        <small>Tools: Cisco Packet Tracer</small>
+      </div>
+      <div class="item">
+        <h3>Wireshark Forensics CTF Challenge</h3>
+        <p>Analyzed packet captures to extract sensitive data from intercepted traffic. Applied forensics knowledge to identify HTTP and DNS requests to identify the attackers activities.</p>
+        <small>Tools: Wireshark</small>
+      </div>
+      <div class="item">
+        <h3>Buffer Overflow 101</h3>
+        <p>Learned how to identify buffer overflow vulnerabilities and craft payloads to exploit memory structures in a controlled lab environment.</p>
         <small>Tools: Immunity Debugger, Python</small>
-      </div>
-      <div class="item">
-        <h3> OSINT Investigation</h3>
-        <p>Used tools like Sherlock, Recon-ng, and theHarvester to discover public footprint.</p>
-        <small>Learned: TryHackMe</small>
-      </div>
-      <div class="item">
-        <h3> Subdomain Enumeration</h3>
-        <p>Used FFUF and Gobuster for URL fuzzing and uncovering hidden directories.</p>
-        <small>Learned: Importance of recon in red teaming TryHackMe</small>
       </div>
     </div>
   </main>
